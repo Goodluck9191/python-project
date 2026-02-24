@@ -3,7 +3,7 @@ stack = []
 valid = True
 
 for ch in expr:
-    if ch in "{[](":
+    if ch in "{[(":
         stack.append(ch)
     else:
         if not stack:
