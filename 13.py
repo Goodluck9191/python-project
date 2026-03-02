@@ -5,20 +5,20 @@ class Queue:
         self.front = -1
         self.rear = -1
 
-    # Enqueue operation
+    
     def enqueue(self, value):
         if self.rear == self.size - 1:
             print("Queue Overflow! Cannot insert element.")
             return
 
-        if self.front == -1:  # First element insertion
+        if self.front == -1:  
             self.front = 0
 
         self.rear += 1
         self.queue[self.rear] = value
         print(f"{value} inserted into queue.")
 
-    # Dequeue operation
+    
     def dequeue(self):
         if self.front == -1 or self.front > self.rear:
             print("Queue Underflow! Queue is empty.")
@@ -28,7 +28,7 @@ class Queue:
         self.front += 1
         print(f"{removed} removed from queue.")
 
-    # Display queue
+    
     def display(self):
         if self.front == -1 or self.front > self.rear:
             print("Queue is empty.")
@@ -40,7 +40,6 @@ class Queue:
         print()
 
 
-# Main Program (User Interactive)
 size = int(input("Enter queue size: "))
 q = Queue(size)
 

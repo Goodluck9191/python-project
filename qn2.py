@@ -1,4 +1,4 @@
-rain = [12,3,4]
+rain = [122,113,114]
 
 max = max(rain)
 

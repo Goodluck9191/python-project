@@ -1,11 +1,11 @@
-# Stack implementation using list
+
 
 class Stack:
     def __init__(self, size):
         self.stack = []
         self.size = size
 
-    # Push operation
+    
     def push(self, value):
         if len(self.stack) >= self.size:
             print("Stack Overflow! Cannot push.")
@@ -13,7 +13,7 @@ class Stack:
             self.stack.append(value)
             print(f"{value} pushed into stack.")
 
-    # Pop operation
+    
     def pop(self):
         if len(self.stack) == 0:
             print("Stack Underflow! Stack is empty.")
@@ -21,7 +21,7 @@ class Stack:
             removed = self.stack.pop()
             print(f"{removed} popped from stack.")
 
-    # Display stack
+    
     def display(self):
         if len(self.stack) == 0:
             print("Stack is empty.")
@@ -31,7 +31,7 @@ class Stack:
                 print(i)
 
 
-# Main Program (User Interactive)
+
 size = int(input("Enter stack size: "))
 s = Stack(size)
 

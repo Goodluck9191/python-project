@@ -28,7 +28,7 @@ class LinkedList:
     def insert_at_position(self, data, position):
         new_node = Node(data)
 
-        # Insert at beginning
+    
         if position == 1:
             new_node.next = self.head
             self.head = new_node
@@ -60,7 +60,6 @@ class LinkedList:
             print(temp.data, end=" -> ")
             temp = temp.next
         print("None")
-
 
 ll = LinkedList()
 

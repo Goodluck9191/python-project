@@ -3,14 +3,14 @@ class TextEditor:
         self.text = ""
         self.undo_stack = []
 
-    # Perform new action (Add text)
+    
     def add_text(self, new_text):
-        # Save current state before modifying
+        
         self.undo_stack.append(self.text)
         self.text += new_text
         print("Text added successfully.")
 
-    # Undo last action
+    
     def undo(self):
         if not self.undo_stack:
             print("Nothing to undo!")
@@ -18,13 +18,13 @@ class TextEditor:
             self.text = self.undo_stack.pop()
             print("Undo performed.")
 
-    # Display current text
+    
     def display(self):
         print("\nCurrent Text:")
         print(self.text if self.text else "[Empty Document]")
 
 
-# Main Program (User Interactive)
+
 editor = TextEditor()
 
 while True:

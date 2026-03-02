@@ -5,14 +5,13 @@ class CircularQueue:
         self.front = -1
         self.rear = -1
 
-    # Enqueue operation
+    
     def enqueue(self, value):
-        # Check if queue is full
+        
         if (self.rear + 1) % self.size == self.front:
             print("Queue Overflow! No space available.")
             return
 
-        # First element insertion
         if self.front == -1:
             self.front = 0
             self.rear = 0
@@ -22,9 +21,9 @@ class CircularQueue:
         self.queue[self.rear] = value
         print(f"{value} added to the queue.")
 
-    # Dequeue operation
+    
     def dequeue(self):
-        # Check if queue is empty
+        
         if self.front == -1:
             print("Queue Underflow! Queue is empty.")
             return
@@ -32,7 +31,7 @@ class CircularQueue:
         removed = self.queue[self.front]
         self.queue[self.front] = None
 
-        # If only one element was present
+        
         if self.front == self.rear:
             self.front = -1
             self.rear = -1
@@ -41,7 +40,7 @@ class CircularQueue:
 
         print(f"{removed} removed from the queue.")
 
-    # Display queue
+    
     def display(self):
         if self.front == -1:
             print("Queue is empty.")

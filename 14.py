@@ -2,12 +2,12 @@ class BankQueue:
     def __init__(self):
         self.queue = []
 
-    # Enqueue customer
+    
     def enqueue(self, customer_name):
         self.queue.append(customer_name)
         print(f"{customer_name} has joined the queue.")
 
-    # Dequeue customer
+    
     def dequeue(self):
         if len(self.queue) == 0:
             print("No customers in queue.")
@@ -15,7 +15,7 @@ class BankQueue:
             served = self.queue.pop(0)
             print(f"{served} has been served and left the bank.")
 
-    # Display queue
+    
     def display(self):
         if len(self.queue) == 0:
             print("Queue is empty.")
@@ -25,7 +25,7 @@ class BankQueue:
                 print(f"{i}. {customer}")
 
 
-# Main Program (User Interactive)
+
 bank = BankQueue()
 
 while True:
